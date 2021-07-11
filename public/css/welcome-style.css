@@ -1,0 +1,109 @@
+* {
+    font-family: 'Raleway', sans-serif;  
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.navbar-brand{
+    width: 5%;
+    height: 5%;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 25px;
+    color: white !important;
+}
+
+.button {
+    background-color: #FFFF01;
+    color: black;
+    border-radius: 15px;
+}
+
+.button-pinjam {
+    background-color: #58d8a3;
+    color: black;
+    border-radius: 15px;
+}
+
+.button:hover {
+    background-color: #FFFF01;
+    color: black;
+    border-radius: 15px;
+}
+
+.button-pinjam:hover {
+    background-color: #58d8a3;
+    color: black;
+    border-radius: 15px;
+}
+
+.jumbotron {
+    background-image: url(../images/image.jpeg);
+    background-size: cover;
+    height: 900px;
+    margin-top: -85px;
+}
+
+.display-4 {
+    color: #FFFF01;
+    margin-top: 300px;
+}
+
+.lead {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.jumbotron p {
+    color: white;
+}
+
+.jumbotron .input {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50px;
+    padding-left: 20px;
+}
+
+.jumbotron .search-box {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #FFFF01;
+}
+
+.foter-main h1 {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-top: -55px;
+}
+/* MOBILE VERSION */
+
+@media (max-width: 992px) { 
+    .navbar-brand {
+        width: 11%;
+        height: 11%;
+        padding-bottom: 10px;
+    }
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .jumbotron {
+    width: 100%;
+    margin-top: 10px;
+    }
+    
+    .jumbotron .input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

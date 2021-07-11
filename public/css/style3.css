@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(211, 211, 211, 0.8),
+    rgba(40, 180, 131, 0.8)),
+    url(../images/image.jpeg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 70px;
+  left: 110px;
+}
+
+.logo {
+  height: 10vh;
+}
+
+.logo-box-mobile {
+  display: none;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.primary-content {
+  color: #FFF;
+  text-transform: uppercase;
+  margin: 60px;
+}
+
+.text-primary {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation: MoveInLeft 1s ease-out;
+}
+
+.text-primary-mobile {
+  display: none;
+}
+
+.text-sub {
+  display: block;
+  font-size: 30px;
+  font: 400;
+  letter-spacing: 17.5px;
+  animation: MoveInRight 1s ease-out;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #FFF;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #FFF;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: MoveInBottom .5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+.foter-main h1 {
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -25px;
+}
+
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  70% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Ver */
+@media (max-width: 992px) {
+  
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(211, 211, 211, 0.8),
+    rgba(40, 180, 131, 0.8)),
+    url(../images/image.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header {
+    margin: 0;
+    padding: 0;
+    clip-path: none;
+    background-image: none;
+  }
+
+  .logo-box {
+    display: none;
+  }
+  
+  .logo {
+    display: none;
+  }
+
+  .logo-box-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-mobile {
+    margin-top: 130px;
+    height: 20vh;
+  }
+  
+  .text-box {
+    top: 25%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  
+  .primary-content {
+    color: #FFF;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .text-primary {
+    display: none;
+  }
+
+  .text-primary-mobile {
+    display: block;
+    word-wrap: break-word;
+    letter-spacing: 0.5em;
+    font-size: 35px;
+    font-weight: 400;
+    animation: MoveInLeft 1s ease-out;
+  }
+  
+  .text-sub {
+    display: block;
+    word-wrap: break-word;
+    font-size: 20px;
+    font: 400;
+    animation: MoveInRight 1s ease-out;
+  }
+
+  .foter-main h1 {
+    color: white;
+  }
+}
